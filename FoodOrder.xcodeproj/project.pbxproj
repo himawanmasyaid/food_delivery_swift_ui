@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142EB16027C5CA60004DA7EA /* RestourantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142EB15F27C5CA60004DA7EA /* RestourantDetailView.swift */; };
+		142EB16327C5E02A004DA7EA /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142EB16227C5E02A004DA7EA /* TextStyle.swift */; };
+		142EB16527C61DDC004DA7EA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142EB16427C61DDC004DA7EA /* LoginView.swift */; };
+		142EB16727C627F6004DA7EA /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142EB16627C627F6004DA7EA /* TextFieldStyle.swift */; };
 		14A2D29E27C29ADD002CB34B /* FoodOrderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2D29D27C29ADD002CB34B /* FoodOrderApp.swift */; };
 		14A2D2A027C29ADD002CB34B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2D29F27C29ADD002CB34B /* ContentView.swift */; };
 		14A2D2A227C29ADE002CB34B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14A2D2A127C29ADE002CB34B /* Assets.xcassets */; };
@@ -38,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		142EB15F27C5CA60004DA7EA /* RestourantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestourantDetailView.swift; sourceTree = "<group>"; };
+		142EB16227C5E02A004DA7EA /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
+		142EB16427C61DDC004DA7EA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		142EB16627C627F6004DA7EA /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
 		14A2D29A27C29ADD002CB34B /* FoodOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A2D29D27C29ADD002CB34B /* FoodOrderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodOrderApp.swift; sourceTree = "<group>"; };
 		14A2D29F27C29ADD002CB34B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		142EB16127C5DFB2004DA7EA /* style */ = {
+			isa = PBXGroup;
+			children = (
+				142EB16227C5E02A004DA7EA /* TextStyle.swift */,
+				142EB16627C627F6004DA7EA /* TextFieldStyle.swift */,
+			);
+			path = style;
+			sourceTree = "<group>";
+		};
 		14A2D29127C29ADD002CB34B = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +122,7 @@
 		14A2D29C27C29ADD002CB34B /* FoodOrder */ = {
 			isa = PBXGroup;
 			children = (
+				142EB16127C5DFB2004DA7EA /* style */,
 				14B7F49427C5505400B31F1D /* model */,
 				14B7F49127C54AF400B31F1D /* extensions */,
 				14A2D2C827C29BAE002CB34B /* view */,
@@ -148,6 +166,8 @@
 			children = (
 				14A2D2C927C29BD8002CB34B /* OnboardingView.swift */,
 				14D64B6127C2AC6400DA69A9 /* HomeView.swift */,
+				142EB15F27C5CA60004DA7EA /* RestourantDetailView.swift */,
+				142EB16427C61DDC004DA7EA /* LoginView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -298,12 +318,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				142EB16327C5E02A004DA7EA /* TextStyle.swift in Sources */,
 				14A2D2CA27C29BD8002CB34B /* OnboardingView.swift in Sources */,
 				14D64B6227C2AC6400DA69A9 /* HomeView.swift in Sources */,
+				142EB16027C5CA60004DA7EA /* RestourantDetailView.swift in Sources */,
 				14B7F49827C565B200B31F1D /* Menu.swift in Sources */,
 				14B7F49627C5554F00B31F1D /* Restaurant.swift in Sources */,
 				14A2D2A027C29ADD002CB34B /* ContentView.swift in Sources */,
+				142EB16727C627F6004DA7EA /* TextFieldStyle.swift in Sources */,
 				14B7F49327C54B2600B31F1D /* Color.swift in Sources */,
+				142EB16527C61DDC004DA7EA /* LoginView.swift in Sources */,
 				14A2D29E27C29ADD002CB34B /* FoodOrderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

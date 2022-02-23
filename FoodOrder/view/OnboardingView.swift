@@ -10,48 +10,54 @@ import SwiftUI
 struct OnboardingView: View {
     var body: some View {
         
-        VStack {
+        NavigationView {
             
-            Spacer()
-            
-            VStack(alignment: .leading) {
+            VStack {
                 
-                Image("ic_logo")
-                .resizable()
-                .frame(width: 175, height: 139, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    .padding(.bottom, 20)
+                Spacer()
                 
-                
-                Text("Food Order")
-                    .font(.largeTitle)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                            
-                Text("Deliever Favorite Food")
-                    .font(.body)
-                    .fontWeight(.regular)
+                VStack(alignment: .leading) {
                     
+                    Image("ic_logo")
+                        .resizable()
+                        .frame(width: 175, height: 139, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .padding(.bottom, 20)
+                    
+                    
+                    Text("Food Order")
+                        .font(.largeTitle)
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    
+                    Text("Deliever Favorite Food")
+                        .font(.body)
+                        .fontWeight(.regular)
+                    
+                    
+                }
+                
+                Spacer()
+                
+                
+                NavigationLink(
+                    destination: HomeView(),
+                    label: {
+                    
+                        Text("Get Started")
+                            .foregroundColor(.white)
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .background(Color("btn_primary"))
+                            .cornerRadius(15)
+                            .padding(16)
+                        
+                    })
                 
             }
             
-            Spacer()
-            
-            Button(action: {
-                print("Mulai Sekarang")
-            }, label: {
-                    Text("Get Started")
-                        .foregroundColor(.white)
-                        .font(.headline)
-                        .fontWeight(.bold)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .background(Color("btn_primary"))
-                        .cornerRadius(15)
-                        .padding(16)
-                
-            })
-
         }
-    
+        
 
     }
 }

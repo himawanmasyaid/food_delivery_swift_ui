@@ -10,66 +10,70 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         
-        ScrollView(showsIndicators: false)  {
+        NavigationView {
             
-            VStack(alignment: .leading, spacing: 0) {
-  
-                Text("Find Your \nFavorite Food")
-                    .fontWeight(.heavy)
-                    .font(.system(size: 31))
-                    .padding([.leading, .trailing], 16)
+            ScrollView(showsIndicators: false)  {
                 
-                SearchFilterView()
-                    .padding([.leading, .trailing, .top], 16)
-                
-                SubHeadlineContentView(title: "Nearest Restaurant")
-                    .padding([.leading, .trailing, .bottom], 16)
-                
-                ScrollView (.horizontal, showsIndicators: false) {
-
-                    HStack (spacing: 0) {
-
-                        RestaurantCardView()
-
-                        RestaurantCardView()
-
-                        RestaurantCardView()
+                VStack(alignment: .leading, spacing: 0) {
+                    
+                    Text("Find Your \nFavorite Food")
+                        .fontWeight(.heavy)
+                        .font(.system(size: 31))
+                        .padding([.leading, .trailing], 16)
+                    
+                    SearchFilterView()
+                        .padding([.leading, .trailing, .top], 16)
+                    
+                    SubHeadlineContentView(title: "Nearest Restaurant")
+                        .padding([.leading, .trailing, .bottom], 16)
+                    
+                    ScrollView (.horizontal, showsIndicators: false) {
                         
-                        RestaurantCardView()
-
+                        HStack (spacing: 0) {
+                            
+                            RestaurantCardView()
+                            
+                            RestaurantCardView()
+                            
+                            RestaurantCardView()
+                            
+                            RestaurantCardView()
+                            
+                        }
+                        
                     }
                     
-                }
-                
-                SubHeadlineContentView(title: "Popular Menu")
-                    .padding([.leading, .trailing, .bottom], 16)
-                
-            
-                MenuCardView(
-                    menu: Menu(name: "Herbal Pancake")
+                    SubHeadlineContentView(title: "Popular Menu")
+                        .padding([.leading, .trailing, .bottom], 16)
+                    
+                    
+                    MenuCardView(
+                        menu: Menu(name: "Herbal Pancake")
+                    )
+                    
+                    MenuCardView(
+                        menu: Menu(name: "Fruit Salad")
+                    )
+                    
+                    MenuCardView(
+                        menu: Menu(name: "Green Noddle")
+                    )
+                    
+                    MenuCardView(
+                        menu: Menu(name: "Rendang Padang")
+                    )
+                    
+                    
+                }.frame(
+                    minWidth: 0,
+                    maxWidth: .infinity,
+                    minHeight: 0,
+                    maxHeight: .infinity,
+                    alignment: .topLeading
                 )
-
-                MenuCardView(
-                    menu: Menu(name: "Fruit Salad")
-                )
+                .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
                 
-                MenuCardView(
-                    menu: Menu(name: "Green Noddle")
-                )
-                
-                MenuCardView(
-                    menu: Menu(name: "Rendang Padang")
-                )
-                
-                
-            }.frame(
-                minWidth: 0,
-                maxWidth: .infinity,
-                minHeight: 0,
-                maxHeight: .infinity,
-                alignment: .topLeading
-            )
-            .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
+            }
             
         }
         
@@ -165,10 +169,8 @@ struct SearchFilterView: View {
                     .resizable()
                     .frame(width: 22, height: 22, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 
-                Spacer()
-                
-                Text("What do you want to order?")
-                    .foregroundColor(Color(""))
+                Text("Find your food?")
+                    .foregroundColor(Color("text_color_secondary"))
                     .font(.subheadline)
                 
                 Spacer()
